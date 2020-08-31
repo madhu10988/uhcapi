@@ -1,0 +1,730 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/img/favicon-96x96.png">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../vendor/fonts/fontawesome/css/fontawesome-all.css">
+    <link rel="stylesheet" href="../vendor/charts/chartist-bundle/chartist.css">
+    <link rel="stylesheet" href="../assets/css/static-main.css" />
+    <link rel="stylesheet" href="../vendor/charts/c3charts/c3.css">
+    <link rel="stylesheet" href="../vendor/bootstrap/css/app.min.css">
+    <link href="../vendor/dt/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <title>UHC Dashboard</title>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+</head>
+
+<style type="text/css">
+a.active{
+    color: #002677!important;
+    background-color: #fff!important;
+    border-color: #dddfeb #dddfeb #fff!important;
+}
+</style>
+
+
+<body style="overflow: hidden;">
+
+    <!--    <div id="wrapper" class="toggled">
+        <div id="menu">
+        <ul class="navbar-nav sidebar sidebar-dark accordion toggled" id="accordionSidebar" style="background-color:#002677!important">
+
+
+            <br/>
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+                <i class="fas fa-cogs" style="font-size: 25px;"></i>
+                <div class="sidebar-brand-text mx-3">Rubicon</div>
+            </a>
+
+
+            <hr class="sidebar-divider my-0" />
+
+            <li class="nav-item" id="dashboardMain">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+            <li class="nav-item" id="appid">
+                <a class="nav-link" href="approval.html">
+                    <i class="fas fa-fw fa-check"></i>
+                    <span>Approvals</span>
+                </a>
+            </li> -->
+
+
+
+
+
+    <!-- <div class="text-center d-none d-md-inline">
+                            <button class="rounded-circle border-0" id="sidebarToggle"></button>
+                          </div> -->
+
+    <!--</ul>
+
+    </div>-->
+    <div id="content-wrapper" class="d-flex flex-column" style="position: absolute;
+        top: 0; bottom: 0; left: 0; right: 0;
+        overflow: auto;">
+        <div id="content">
+            <!-- ============================================================== -->
+            <!-- main wrapper -->
+            <!-- ============================================================== -->
+            <div class="dashboard-main-wrapper">
+                <!-- ============================================================== -->
+                <!-- navbar -->
+                <!-- ============================================================== -->
+                <div class="dashboard-header">
+                    <nav class="navbar navbar-expand-lg bg-white fixed-top" style="    height: 59px!important">
+                        <a class="navbar-brand" href="../index.html">
+                            <div class="site-title">
+                                <img alt="UnitedHealthcare" src="https://www.uhc.com/content/dam/uhcdotcom/website-assets/logo-blue.svg" style="height: 55px;margin-left:10px;"> </div>
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                            <ul class="navbar-nav ml-auto navbar-right-top">
+                                <li class="nav-item">
+                                    <div id="custom-search" class="top-search-bar">
+                                        <input class="form-control" type="text" placeholder="Search..">
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown notification">
+                                    <a class="nav-link nav-icons" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-fw fa-bell"></i>
+                                        <span class="indicator"></span>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-right notification-dropdown">
+                                        <li>
+                                            <div class="notification-title"> Notification</div>
+                                            <div class="notification-list">
+
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="list-footer">
+                                                <a href="#">View all notifications</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown connection">
+                                    <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-fw fa-th"></i>
+                                    </a>
+
+                                </li>
+
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <!-- ============================================================== -->
+                <!-- end navbar -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- left sidebar -->
+                <!-- ============================================================== -->
+
+                <!-- ============================================================== -->
+                <!-- end left sidebar -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- wrapper  -->
+                <!-- ============================================================== -->
+                <div class="dashboard-wrapper">
+
+                    <p style="    padding-left: 35px;
+    font-size: 1.8rem; font-family:UHCSerif; font-weight:700; color:#002677;">
+                    </p>
+
+                    <div class="container-fluid  dashboard-content">
+                        <!-- ============================================================== -->
+                        <!-- pageheader -->
+                        <!-- ============================================================== -->
+                        <div class="row">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+
+                            </div>
+                        </div>
+                        <!-- ============================================================== -->
+                        <!-- end pageheader -->
+                        <!-- ============================================================== -->
+
+
+                        <div class="row">
+                            <!-- ============================================================== -->
+                            <!-- simple line chart  -->
+                            <!-- ============================================================== -->
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+                                <div class="card">
+                                    <h5 class="card-header" style="background-color: #002677;
+                                    color: white;">Sandbox Request</h5>
+                                    <div class="card-body">
+                                        <canvas id="line-chart" height="200px;"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+                                <div class="card">
+                                    <h5 class="card-header" style="background-color: #002677;
+                                    color: white;">Production Request</h5>
+                                    <div class="card-body">
+                                        <canvas id="line-chartProd" height="200px;"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <!-- ============================================================== -->
+                            <!-- line chart with area  -->
+                            <!-- ============================================================== -->
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+                                <div class="card">
+                                    <h5 class="card-header" style="background-color: #002677;
+                                    color: white;">Request Blocked</h5>
+                                    <div class="card-body">
+                                        <canvas id="myChart" height="200px;"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ============================================================== -->
+                            <!-- end line chart with area  -->
+                            <!-- ============================================================== -->
+                            <!-- ============================================================== -->
+                            <!-- bi polar chart  -->
+                            <!-- ============================================================== -->
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+                                <div class="card">
+                                    <h5 class="card-header" style="background-color: #002677;
+                                    color: white;">Request Failed</h5>
+                                    <div class="card-body">
+                                        <canvas id="myChartFailed" height="200px;"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ============================================================== -->
+                            <!-- end bi polar chart  -->
+                            <!-- ============================================================== -->
+                        </div>
+
+                        <div class="row">
+                            <!-- +++++++++++++++++++ Start ++++++++++++++++ -->
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div class="card">
+                                    <div class="card-header" style="background-color: #002677;"> 
+                                        <ul class="nav nav-tabs card-header-tabs" id="bologna-list" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" style="color:white;"  href="#sandboxRequest" role="tab" aria-controls="sandboxRequest" aria-selected="true">Sandbox Request (5)</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" style="color:white;"  href="#productionRequest" role="tab" aria-controls="productionRequest" aria-selected="false">Production Request (6)</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" style="color:white;" href="#requestBlocked" role="tab" aria-controls="requestBlocked" aria-selected="false">Request Blocked</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                    <a class="nav-link" style="color:white;"  href="#requestFailed" role="tab" aria-controls="requestFailed" aria-selected="false">Request Failed</a>
+                                                </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="tab-content mt-3">
+                                            <div class="tab-pane active" id="sandboxRequest" role="tabpanel">
+                                                <p class="card-text">
+                                                        <table class="table table-striped table-bordered table-sm" id="sandboxTable" style="width: 100%">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th style="width: 20%">Sandbox API</th>
+                                                                        <th style="width: 20%">Organization</th>
+                                                                        <th style="width: 10%">User ID </th>
+                                                                        <th style="width: 20%">Email ID </th>
+                                                                        <th style="width: 10%">Location</th>
+                                                                        <th style="width: 10%">Action</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>https://sandbox.api.uhc.com </td>
+                                                                        <td>Optum </td>
+                                                                        <td>Amit001 </td>
+                                                                        <td>amit@optum.com</td>
+                                                                        <td>India</td>
+                                                                        <td>
+                                                                            <a class="fa fa-check" href="#" aria-label="Developer Sandbox" target="_self">
+                                                                            </a> /
+                                                                            <a class="fa fa-ban" style="color: red;" href="#" aria-label="Developer Sandbox" target="_self">
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>https://sandbox.api.uhc.com </td>
+                                                                        <td>UHC </td>
+                                                                        <td>D00987 </td>
+                                                                        <td>david@uhc.com </td>
+                                                                        <td>New Jersey</td>
+                                                                        <td>
+                                                                            <a class="fa fa-check" href="#" aria-label="Developer Sandbox" target="_self">
+                                                                            </a> /
+                                                                            <a class="fa fa-ban" style="color: red;" href="#" aria-label="Developer Sandbox" target="_self">
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>https://sandbox.api.uhc.com </td>
+                                                                        <td>UHC </td>
+                                                                        <td>Z98767</td>
+                                                                        <td>z786@uhc.com</td>
+                                                                        <td>Minnesota</td>
+                                                                        <td>
+                                                                            <a class="fa fa-check" href="#" aria-label="Developer Sandbox" target="_self">
+                                                                            </a> /
+                                                                            <a class="fa fa-ban" style="color: red;" href="#" aria-label="Developer Sandbox" target="_self">
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>https://sandbox.api.uhc.com </td>
+                                                                        <td>Optum</td>
+                                                                        <td>E87690</td>
+                                                                        <td>eva@optum.com </td>
+                                                                        <td>US</td>
+                                                                        <td>
+                                                                            <a class="fa fa-check" href="#" aria-label="Developer Sandbox" target="_self">
+                                                                            </a> /
+                                                                            <a class="fa fa-ban" style="color: red;" href="#" aria-label="Developer Sandbox" target="_self">
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>https://sandbox.api.uhc.com </td>
+                                                                        <td>UHC </td>
+                                                                        <td>Q98767</td>
+                                                                        <td>quency_utf@uhc.com</td>
+                                                                        <td>San Diego</td>
+                                                                        <td>
+                                                                            <a class="fa fa-check" href="#" aria-label="Developer Sandbox" target="_self">
+                                                                            </a> /
+                                                                            <a class="fa fa-ban" style="color: red;" href="#" aria-label="Developer Sandbox" target="_self">
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>    
+                                                </p>
+                                               
+                                            </div>
+
+                                            <div class="tab-pane" id="productionRequest" role="tabpanel" aria-labelledby="history-tab">
+                                                <p class="card-text">
+                                                        <table class="table table-striped table-bordered table-sm" id="prodTable" style="width: 100%">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th style="width: 20%">Production API</th>
+                                                                        <th style="width: 20%">Organization</th>
+                                                                        <th style="width: 10%">User ID </th>
+                                                                        <th style="width: 20%">Email ID </th>
+                                                                        <th style="width: 10%">Location</th>
+                                                                        <th style="width: 10%">Action</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>https://patient-profile.api.uhc.com </td>
+                                                                        <td>Optum </td>
+                                                                        <td>Amit001 </td>
+                                                                        <td>amit@optum.com</td>
+                                                                        <td>India</td>
+                                                                        <td>
+                                                                            <a class="fa fa-check" href="#" aria-label="Developer Sandbox" target="_self">
+                                                                            </a> /
+                                                                            <a class="fa fa-ban" style="color: red;" href="#" aria-label="Developer Sandbox" target="_self">
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>https://carrier-claim-profile.api.uhc.com </td>
+                                                                        <td>UHC </td>
+                                                                        <td>D00987 </td>
+                                                                        <td>david@uhc.com </td>
+                                                                        <td>New Jersey</td>
+                                                                        <td>
+                                                                            <a class="fa fa-check" href="#" aria-label="Developer Sandbox" target="_self">
+                                                                            </a> /
+                                                                            <a class="fa fa-ban" style="color: red;" href="#" aria-label="Developer Sandbox" target="_self">
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>https://dme-claim-profile.api.uhc.com </td>
+                                                                        <td>UHC </td>
+                                                                        <td>Z98767</td>
+                                                                        <td>z786@uhc.com</td>
+                                                                        <td>Minnesota</td>
+                                                                        <td>
+                                                                            <a class="fa fa-check" href="#" aria-label="Developer Sandbox" target="_self">
+                                                                            </a> /
+                                                                            <a class="fa fa-ban" style="color: red;" href="#" aria-label="Developer Sandbox" target="_self">
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>https://hha-claim-profile.api.uhc.com </td>
+                                                                        <td>Optum</td>
+                                                                        <td>E87690</td>
+                                                                        <td>eva@optum.com </td>
+                                                                        <td>US</td>
+                                                                        <td>
+                                                                            <a class="fa fa-check" href="#" aria-label="Developer Sandbox" target="_self">
+                                                                            </a> /
+                                                                            <a class="fa fa-ban" style="color: red;" href="#" aria-label="Developer Sandbox" target="_self">
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>https://outpatient-claim-profile.api.uhc.com </td>
+                                                                        <td>UHC </td>
+                                                                        <td>Q98767</td>
+                                                                        <td>quency_utf@uhc.com</td>
+                                                                        <td>San Diego</td>
+                                                                        <td>
+                                                                            <a class="fa fa-check" href="#" aria-label="Developer Sandbox" target="_self">
+                                                                            </a> /
+                                                                            <a class="fa fa-ban" style="color: red;" href="#" aria-label="Developer Sandbox" target="_self">
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>https://inpatient-claim-profile.api.uhc.com </td>
+                                                                        <td>UHC </td>
+                                                                        <td>Tim675</td>
+                                                                        <td>tim675f@uhc.com</td>
+                                                                        <td>India</td>
+                                                                        <td>
+                                                                            <a class="fa fa-check" href="#" aria-label="Developer Sandbox" target="_self">
+                                                                            </a> /
+                                                                            <a class="fa fa-ban" style="color: red;" href="#" aria-label="Developer Sandbox" target="_self">
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                </p>
+                                                
+                                            </div>
+
+                                            <div class="tab-pane" id="requestBlocked" role="tabpanel" aria-labelledby="deals-tab">
+                                                <p class="card-text">
+                                                        <table class="table table-striped table-bordered table-sm" id="blockedTable" style="width: 100%">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th style="width: 20%">Sandbox API</th>
+                                                                        <th style="width: 20%">Organization</th>
+                                                                        <th style="width: 10%">User ID </th>
+                                                                        <th style="width: 20%">Email ID </th>
+                                                                        <th style="width: 10%">Location</th>
+                                                                        <th style="width: 20%">Remarks</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>https://sandbox.api.uhc.com </td>
+                                                                        <td>Optum </td>
+                                                                        <td>Amit001 </td>
+                                                                        <td>amit@optum.com</td>
+                                                                        <td>India</td>
+                                                                        <td>
+                                                                            Invoked
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>https://sandbox.api.uhc.com </td>
+                                                                        <td>UHC </td>
+                                                                        <td>D00987 </td>
+                                                                        <td>david@uhc.com </td>
+                                                                        <td>New Jersey</td>
+                                                                        <td>
+                                                                                Invoked
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>https://sandbox.api.uhc.com </td>
+                                                                        <td>UHC </td>
+                                                                        <td>Z98767</td>
+                                                                        <td>z786@uhc.com</td>
+                                                                        <td>Minnesota</td>
+                                                                        <td>
+                                                                                Invoked
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>https://sandbox.api.uhc.com </td>
+                                                                        <td>Optum</td>
+                                                                        <td>E87690</td>
+                                                                        <td>eva@optum.com </td>
+                                                                        <td>US</td>
+                                                                        <td>
+                                                                                Invoked
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>https://sandbox.api.uhc.com </td>
+                                                                        <td>UHC </td>
+                                                                        <td>Q98767</td>
+                                                                        <td>quency_utf@uhc.com</td>
+                                                                        <td>San Diego</td>
+                                                                        <td>
+                                                                                Invoked
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>    
+                                                </p>
+                                                
+                                            </div>
+                                            <div class="tab-pane" id="requestFailed" role="tabpanel" aria-labelledby="deals-tab">
+                                                    <p class="card-text">
+                                                            <table class="table table-striped table-bordered table-sm" id="failedTable" style="width: 100%">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th style="width: 20%">Sandbox API</th>
+                                                                            <th style="width: 20%">Organization</th>
+                                                                            <th style="width: 10%">User ID </th>
+                                                                            <th style="width: 20%">Email ID </th>
+                                                                            <th style="width: 10%">Location</th>
+                                                                            <th style="width: 20%">Remarks</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>https://sandbox.api.uhc.com </td>
+                                                                            <td>Optum </td>
+                                                                            <td>Amit001 </td>
+                                                                            <td>amit@optum.com</td>
+                                                                            <td>India</td>
+                                                                            <td>
+                                                                                    BAD REQUEST
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>https://sandbox.api.uhc.com </td>
+                                                                            <td>UHC </td>
+                                                                            <td>D00987 </td>
+                                                                            <td>david@uhc.com </td>
+                                                                            <td>New Jersey</td>
+                                                                            <td>
+                                                                                    UNAUTHORIZED
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>https://sandbox.api.uhc.com </td>
+                                                                            <td>UHC </td>
+                                                                            <td>Z98767</td>
+                                                                            <td>z786@uhc.com</td>
+                                                                            <td>Minnesota</td>
+                                                                            <td>
+                                                                                    FORBIDDEN
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>https://sandbox.api.uhc.com </td>
+                                                                            <td>Optum</td>
+                                                                            <td>E87690</td>
+                                                                            <td>eva@optum.com </td>
+                                                                            <td>US</td>
+                                                                            <td>
+                                                                                    REQUEST TIMEOUT
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>https://sandbox.api.uhc.com </td>
+                                                                            <td>UHC </td>
+                                                                            <td>Q98767</td>
+                                                                            <td>quency_utf@uhc.com</td>
+                                                                            <td>San Diego</td>
+                                                                            <td>
+                                                                                    MISSING ARGUMENTS
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>  
+                                                    </p>
+                                                    
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ============================================================== -->
+                        </div>
+
+
+
+
+                    </div>
+                    <!-- ============================================================== -->
+                    <!-- footer -->
+                    <!-- ============================================================== -->
+
+                    <!-- ============================================================== -->
+                    <!-- end footer -->
+                    <!-- ============================================================== -->
+                </div>
+
+
+            </div>
+        </div>
+
+        <footer class="ds-base ds-u-fill--white ds-u-margin-top--1  ds-u-padding-y--6" role="contentinfo">
+            <div class="ds-l-container">
+                <div class="ds-l-row col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" style="padding-bottom:12px;">
+                
+                            <?xml version="1.0" encoding="UTF-8"?>
+                            <img alt="" src="https://www.uhc.com/content/dam/uhcdotcom/website-assets/logo-white.svg" style="max-width: 104px; margin-bottom:15px;">
+                            <p style="color:#fff; font-weight:600;display: inline;padding-top: 23px;">&nbsp;&nbsp;#7th Floor of Tower A Unitech Cyber Park, Arya Samaj Rd, Sector 39, Gurugram, Haryana 122001,
+                                India.
+                            </p>
+         
+
+
+                </div>
+                <div style="padding-top:20px; color:#fff; font-size:11px; border-top:1px solid #b3babc;">
+                    <span class="lg-display-inlineBlock mr-6">© 2020 United HealthCare Services, Inc.</span>
+
+
+                </div>
+            </div>
+
+        </footer>
+    </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- end main wrapper -->
+    <!-- ============================================================== -->
+    <!-- Optional JavaScript -->
+    <script src="../vendor/jquery/jquery-3.3.1.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="../vendor/slimscroll/jquery.slimscroll.js"></script>
+    <script src="../vendor/charts/chartist-bundle/chartist.min.js"></script>
+    <script src="../vendor/charts/chartist-bundle/Chartistjs.js"></script>
+    <script src="../vendor/charts/c3charts/c3.min.js"></script>
+    <script src="../vendor/charts/c3charts/d3-5.4.0.min.js"></script>
+    <script src="../vendor/charts/c3charts/C3chartjs.js"></script>
+    <script src="../assets/libs/js/main-js.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="../vendor/dt/jquery.dataTables.min.js"></script>
+
+</body>
+
+<script type="text/javascript">
+
+    $("#dashboardMain").addClass("active");
+
+    $('#sandboxTable').DataTable();
+    $('#blockedTable').DataTable();
+    $('#failedTable').DataTable();
+    
+
+    $('#bologna-list a').on('click', function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+    })
+
+
+
+    function showHideSan() {
+        $("#sanDiv").toggle();
+        if ($("#prodDiv").is(":visible")) {
+            $("#prodDiv").toggle();
+        }
+
+    }
+    $('#prodTable').DataTable();
+
+
+    function showHide() {
+        $("#prodDiv").toggle();
+        if ($("#sanDiv").is(":visible")) {
+            $("#sanDiv").toggle();
+        }
+    }
+
+    new Chart(document.getElementById("line-chart"), {
+        type: 'line',
+        data: {
+            labels: ["M", "T", "W", "T", "F"],
+            datasets: [{
+                data: [11, 9, 6, 8, 5],
+                label: "Pending",
+                borderColor: "red",
+                fill: false
+            }, {
+                data: [2, 1, 3, 7, 3],
+                label: "Approved",
+                borderColor: "blue",
+                fill: false
+            }
+            ]
+        },
+
+    });
+
+    new Chart(document.getElementById("line-chartProd"), {
+        type: 'line',
+        data: {
+            labels: ["M", "T", "W", "T", "F"],
+            datasets: [{
+                data: [5, 3, 8, 2, 6],
+                label: "Pending",
+                borderColor: "red",
+                fill: false
+            }, {
+                data: [2, 1, 3, 7, 3],
+                label: "Approved",
+                borderColor: "blue",
+                fill: false
+            }
+            ]
+        },
+
+    });
+
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['M', 'T', 'W', 'T', 'F'],
+            datasets: [{
+                label: 'Blocked',
+                data: [2, 29, 5, 5, 2],
+                backgroundColor: "rgba(255,153,0,0.6)"
+            }]
+        }
+    });
+
+    var ctx = document.getElementById('myChartFailed').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['M', 'T', 'W', 'T', 'F'],
+            datasets: [{
+                label: 'Failed',
+                data: [5, 10, 15, 3, 4],
+                backgroundColor: "pink"
+            }]
+        }
+    });
+</script>
+
+</html>
